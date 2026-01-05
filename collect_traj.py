@@ -5,22 +5,17 @@ from ase.io import read, write
 filepath = r'E:\Project\57.MgTFSI2_DME_interface\7.workflow\train_data/'
 
 traj_to_collect = [
-                   # 'pro_43_6_21_p1.traj',
-                   # 'pro_43_6_37_p1.traj',
-                   # 'pro_43_6_37_p2.traj',
-                   # 'pro_43_6_41_p1.traj',
-                   # 'pro_43_6_41_p2.traj',
-                   # 'pro_43_6_44.traj',
-                   #'pro_43_6_48_p1.traj',
-                   #'pro_43_6_48_p2.traj',
-                   #'pro_43_6_7_p1.traj',
-                   #'pro_43_6_9.traj',
-                   #'interface_cluster_Mg1.traj',
-                   #'interface_cluster_Mg2_p1.traj',
-                   #'interface_cluster_Mg2_p2.traj',
-                   #'interface_solvent_p1.traj',
-                   #'interface_solvent_p2.traj',
-                   'pro_43_6_21_Mg4.traj'
+                   'pro_43_6_7_Mg10.traj',
+    'pro_43_6_9_Mg1-cp2k.traj',
+    'pro_43_6_9_Mg1-v2c.traj',
+    'pro_43_6_17_Mg3-cp2k.traj',
+    'pro_43_6_17_Mg3-v2c.traj',
+    'pro_43_6_21_Mg4.traj',
+    'pro_43_6_25_Mg6.traj',
+    'pro_43_6_39_Mg8.traj',
+    'pro_43_6_44_Mg2-cp2k.traj',
+    'pro_43_6_44_Mg2-v2c.traj',
+
                    ]
 
 

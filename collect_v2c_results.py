@@ -1,7 +1,7 @@
 import os
 
-filepath = r'E:\Project\57.MgTFSI2_DME_interface\4.pro_43_6\2.pro_43_6_9_Mg1\2.vasp2cp2k\xyz_files/'
-filename_pre = 'pro_43_6_9_Mg1-'
+filepath = r'E:\Project\57.MgTFSI2_DME_interface\4.pro_43_6\7.pro_43_6_17_Mg3\1.vasp2cp2k\v2c_files/'
+filename_pre = 'pro_43_6_17_Mg3-'
 
 # 创建并写入energy文件的第一行
 energy_filename = filename_pre + '1.ener'
@@ -28,7 +28,7 @@ open(force_file, 'w').close()
 print(f"已准备好文件: {force_file}")
 
 # 处理多个输出文件
-for i in range(0, 800):
+for i in range(0, 240):
     frame_now = i * 10
     outfile_name = filename_pre + f'{frame_now}.out'
     outfile = filepath + outfile_name

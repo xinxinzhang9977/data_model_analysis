@@ -101,7 +101,7 @@ def create_aimd_trajectory(pos_file, frc_file=None, ener_file=None,stress_file=N
                       stress_data['yz [bar]'][j],stress_data['xz [bar]'][j],stress_data['xy [bar]'][j]]
         calc = SinglePointCalculator(atoms=atoms[j],
                                      forces=forces[j].get_positions(),
-                                     energy=energy_data['Cons Qty[a.u.]'][j],
+                                     energy=energy_data['Pot.[a.u.]'][j],
                                      stress=stress_now)
         atoms[j].calc = calc
     trajectory.append(atoms)
@@ -110,8 +110,8 @@ def create_aimd_trajectory(pos_file, frc_file=None, ener_file=None,stress_file=N
 
 # 使用示例
 if __name__ == "__main__":
-    filepath = r'E:\Project\57.MgTFSI2_DME_interface\4.pro_43_6\cp2k/'
-    program_name = 'pro_43_6_21_Mg4'
+    filepath = r'E:\Project\57.MgTFSI2_DME_interface\4.pro_43_6\7.pro_43_6_17_Mg3\1.vasp2cp2k/'
+    program_name = 'pro_43_6_17_Mg3'
     pos_filename = program_name+'-pos-1.xyz'
     frc_filename = program_name+'-frc-1.xyz'
     ener_filename = program_name+'-1.ener'
