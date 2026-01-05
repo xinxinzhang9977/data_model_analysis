@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 对每个镁离子会输出一个solvation_total_{selection}.dat文件，记录各配体的数量变化
 可以配合pic_z_pos_solvation.py画图
 这个程序跑起来比较慢
-
 '''
 def find_name(resid):
     if resid == 0:
