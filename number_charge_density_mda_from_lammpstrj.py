@@ -7,8 +7,8 @@ import os
 
 t0 = time.perf_counter()  # 计时开始（更高精度）
 
-filepath = r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\8.MD_init2_0V/'
-trj_filename = 'NVEe.lammpsdump'
+filepath = r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\7.MD_init2_nvt_5V/'
+trj_filename = 'NVEe_1_1.lammpsdump'
 data_filename = 'NVEa3.data'
 
 sys = mda.Universe(os.path.join(filepath, data_filename),

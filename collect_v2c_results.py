@@ -28,7 +28,7 @@ open(force_file, 'w').close()
 print(f"已准备好文件: {force_file}")
 
 # 处理多个输出文件
-for i in range(0, 6):
+for i in range(0, 800):
     frame_now = i * 10
     outfile_name = filename_pre + f'{frame_now}.out'
     outfile = filepath + outfile_name
