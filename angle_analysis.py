@@ -2,7 +2,10 @@ import MDAnalysis as mda
 import numpy as np
 import matplotlib.pyplot as plt
 
-
+'''
+分析三个原子之间的角度随模拟时间的变化
+输出文件angle_analysis.dat
+'''
 # 计算角度（使用自定义函数）
 def calculate_angle_from_positions(positions):
     """

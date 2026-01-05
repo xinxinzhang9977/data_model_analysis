@@ -4,7 +4,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import time
 import os
-
+'''
+用MDanalysis统计离子数和溶剂的密度分布
+跑的比较慢，跑一个隔100帧的分轨迹大约需要40分钟
+'''
 t0 = time.perf_counter()  # 计时开始（更高精度）
 
 filepath = r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\7.MD_init2_nvt_5V/'
