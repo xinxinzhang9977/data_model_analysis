@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 filepath = r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\7.MD_init2_nvt_5V/'
 topo_file = 'NVEa3.data'
 trj_file = 'NVEe_1_5.lammpsdump'
-sys = mda.Universe(topology=filepath+topo_file, trajectory=filepath+trj_file)
+sys = mda.Universe(filepath+topo_file,filepath+trj_file)
 zmax = max(sys.atoms.positions[:,2])
 zmin = min(sys.atoms.positions[:,2])
 zmid = (zmax+zmin)/2
