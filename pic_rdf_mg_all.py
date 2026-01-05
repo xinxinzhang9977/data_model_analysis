@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
+'''
 
+'''
 # 请填写您的文件路径和文件名
 filepath = r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\5.MD_e_6V/'  # 例如: r'C:\data\'
 filename = 'NVEe_1_5.lammpsdump_average_rdf_results.dat'   # 例如: 'data.txt'
