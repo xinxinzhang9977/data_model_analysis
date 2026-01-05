@@ -1,7 +1,10 @@
 import os
 import numpy as np
 import matplotlib.pyplot as plt
-
+'''
+绘制上下两个子图，上图是镁离子的z坐标变化，下图是镁离子配体配位数量的变化
+保存图片pic_z_pos_solvation_{selection}.jpg
+'''
 for i in range(801,821):
     selection = f'resid {i}'
     print(selection)

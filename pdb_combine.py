@@ -3,6 +3,8 @@ from ase import Atoms
 
 '''
 把液相和电极的pdb结构合到一起去
+电极slab的pdb文件来自slab_creation.py
+液相的pdb文件来自packmol
 '''
 filepath = r'E:\Project\57.MgTFSI2_DME_interface\7.workflow\intial_structure/'
 filename1 = 'mg_slab_model.pdb'

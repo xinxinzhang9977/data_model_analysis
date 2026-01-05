@@ -1,7 +1,9 @@
 from ase import Atoms
 from ase.build import bulk
 import numpy as np
-
+'''
+创建Mg slab的pdb文件
+'''
 # 定义晶格参数
 a1 = 3.20940
 a2 = 5.55884
