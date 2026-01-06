@@ -6,9 +6,9 @@ from ase import Atoms
 电极slab的pdb文件来自slab_creation.py
 液相的pdb文件来自packmol
 '''
-filepath = r'/7.workflow/intial_structure/'
+filepath = r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\13.MD_init3_long_5V/'
 filename1 = 'mg_slab_model.pdb'
-filename2 = 'MgTFSI2_DME_30.pdb'
+filename2 = 'MgTFSI2_DME.pdb'
 # 读取两个PDB文件
 atoms1 = read(filepath+filename1)
 atoms2 = read(filepath+filename2)
