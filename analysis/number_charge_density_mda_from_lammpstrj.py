@@ -6,6 +6,12 @@ import time
 import os
 '''
 用MDanalysis统计离子数和溶剂的密度分布
+输出数据文件
+- {trj_filename}_mg_density_average.txt
+- {trj_filename}_anion_density_average.txt
+- {trj_filename}_density_average.txt
+保存图片
+- {trj_filename}_avg_linear_density.png
 跑的比较慢，跑一个隔100帧的分轨迹大约需要40分钟
 '''
 t0 = time.perf_counter()  # 计时开始（更高精度）
@@ -108,9 +114,9 @@ print(f"图像已保存: {fig_name}")
 #plt.show()
 
 # 保存数据
-np.savetxt(os.path.join(filepath, 'mg_density_average.txt'),
+np.savetxt(os.path.join(filepath, f'{trj_filename}_mg_density_average.txt'),
            np.column_stack((z_pos, mg_density_avg)))
-np.savetxt(os.path.join(filepath, 'anion_density_average.txt'),
+np.savetxt(os.path.join(filepath, f'{trj_filename}_anion_density_average.txt'),
            np.column_stack((z_pos, anion_density_avg)))
 
 output_name = os.path.join(filepath, f"{trj_filename}_density_average.txt")
