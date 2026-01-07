@@ -18,8 +18,8 @@ R_a = 0.8e-9;
 v_c  = 4/3*pi*R_c^3;            % ion volume
 v_a = 4/3*pi*R_a^3;
 c0_c = 5000*NA;               % bulk concentration (SAFE < close packing)
-c0_a = 5000*NA;
-qs = 1.2;                 % surface charge density (C/m^2)
+c0_a = 5000*NA*2;
+qs = -2;                 % surface charge density (C/m^2)
 
 %% =========================================================
 %  Spatial grid
@@ -43,8 +43,8 @@ mu_ex_bar_c  = zeros(Nx,1);
 %% =========================================================
 %  Iteration parameters
 %% =========================================================
-maxIter = 20000;
-tol     = 1e-5;
+maxIter = 16000;
+tol     = 1e-4;
 alpha   = 0.00001;
 err_hist = nan(maxIter,1);   % record max |phi - phi_old|
 
@@ -74,7 +74,7 @@ for it = 1:maxIter
     arg_plus  = max(min(arg_plus,  50), -50);
     arg_minus = max(min(arg_minus, 50), -50);
     
-    c_plus  = c0_c * exp(-beta*e*phi_bar_c - beta*mu_ex_bar_c);
+    c_plus  = c0_c * exp(-2*beta*e*phi_bar_c - beta*mu_ex_bar_c);
     c_minus = c0_c * exp(+beta*e*phi_bar_a - beta*mu_ex_bar_c);
 
 mask_c = (x >= R_c);
@@ -123,9 +123,9 @@ end
 %  Post-processing (Fig.2 / Fig.3 style)
 %% =========================================================
 phi_bar_c = Ws_c * phi;
-c_plus  = c0_c * exp(-beta*e*phi_bar_c - beta*mu_ex_bar_c);
+c_plus  = c0_c * exp(-2*beta*e*phi_bar_c - beta*mu_ex_bar_c);
 c_minus = c0_c * exp(+beta*e*phi_bar_a - beta*mu_ex_bar_a);
-rho     = e * (c_plus - c_minus);
+rho     = e * (2*c_plus - c_minus);
 mask_c = (x >= R_c);
 c_plus(~mask_c)  = 0;
 mask_a = (x >= R_a);

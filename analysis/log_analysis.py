@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # 读取数据
-data_path = r"E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\7.MD_init2_nvt_5V/"
+data_path = r"E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\12.MD_init2_4V/"
 log = lammps_logfile.File(data_path+'log.ele_prolong')
 run_num = 0
 x = log.get("Step", run_num)

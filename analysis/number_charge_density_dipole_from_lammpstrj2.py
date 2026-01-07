@@ -128,7 +128,7 @@ class DensityFromLammpstrj():
         potential = np.zeros_like(charge_density_ave[:, 0])
         for i in range(1, len(charge_density_ave)):
             efield[i] = efield[i - 1] + charge_density_ave[i][1] * e / (
-                    x_size * y_size * bin * epsilon * 1e-30) * bin * 1e-10
+                    x_size * y_size * bin *epsilon * 1e-30) * bin * 1e-10
 
             # potential[i] = potential[i - 1] - (efield[i - 1] * bin + charge_density_ave[i][2] * bin) # charge_density第三列是偶极矩密度
             potential[i] = potential[i - 1] - efield[i - 1] * bin * 1e-10  # charge_density第三列是偶极矩密度
@@ -315,9 +315,9 @@ if __name__ == '__main__':
                   'mgtfsi2_dme_800_0V': r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\8.MD_init2_0V/'
                   }
 
-    sys_name = 'mgtfsi2_dme_800_0V'
+    sys_name = 'mgtfsi2_dme_800_5V'
     LINE_NUMBER_PER_FRAME = 15589  # p每帧的行数
-    LAMMPSTRJ_NAME = 'NVEe_1_1_element_labeled.lammpstrj'
+    LAMMPSTRJ_NAME = 'NVEe_1_5_element_labeled.lammpstrj'
 
     for start in [0]:
         end = start + 100
@@ -325,7 +325,7 @@ if __name__ == '__main__':
         CHARGE_NAME = LAMMPSTRJ_NAME + f'_total_density_{start}_{end}_{step}.dat'
         POTENTIAL_NAME = LAMMPSTRJ_NAME + f'_potential_{start}_{end}_{step}.dat'
         BROADEN_NAME = LAMMPSTRJ_NAME + f'_broaden_density_{start}_{end}_{step}.dat'
-        F_DENSITY = False  # 设置为False来测试读取现有数据
+        F_DENSITY = True  # 设置为False来测试读取现有数据
 
         f_path = title_dict[sys_name]
 
