@@ -312,10 +312,11 @@ if __name__ == '__main__':
                   'mgtfsi2_dme_800_4V': r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\12.MD_init2_4V/',
                   'mgtfsi2_dme_800_3V': r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\9.MD_init2_3V/',
                   'mgtfsi2_dme_800_1V': r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\10.MD_init2_1V/',
-                  'mgtfsi2_dme_800_0V': r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\8.MD_init2_0V/'
+                  'mgtfsi2_dme_800_0V': r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\8.MD_init2_0V/',
+                  'mgtfsi2_dme_800_5V_scale_0.5':r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\14.MD_init2_charge_scale_0.5_5V/'
                   }
 
-    sys_name = 'mgtfsi2_dme_800_5V'
+    sys_name = 'mgtfsi2_dme_800_5V_scale_0.5'
     LINE_NUMBER_PER_FRAME = 15589  # p每帧的行数
     LAMMPSTRJ_NAME = 'NVEe_1_5_element_labeled.lammpstrj'
 
