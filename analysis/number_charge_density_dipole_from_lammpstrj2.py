@@ -69,7 +69,7 @@ class DensityFromLammpstrj():
         self.step_index = LINE_NUMBER_PER_FRAME * step  # 要算的帧间隔的行数
 
     def get_density(self, data, bin=0.1):
-        z_size = 120
+        z_size = 120 #200 #120
         z_pos = np.arange(-20, z_size, bin)
         num_of_pos = len(z_pos)
         num_of_atom = len(data)
@@ -90,7 +90,7 @@ class DensityFromLammpstrj():
         return z_pos, charge_dens, ion_dens
 
     def get_dipole(self, data, bin=0.1, polar=False):
-        z_size = 120
+        z_size = 120 #200 #120
         e = 1.6e-19
         z_pos = np.arange(-20, z_size, bin)
         num_of_pos = len(z_pos)
@@ -117,8 +117,8 @@ class DensityFromLammpstrj():
         return z_pos, dipole_dens
 
     def get_potential(self):
-        x_size = 48.141
-        y_size = 50.03
+        x_size = 48.141 #32.094 #48.141
+        y_size = 50.03 #33.353 #50.03
         e = 1.6e-19
         epsilon = 8.85e-12
         # 读取电荷密度文件，跳过第一行的列名
@@ -313,11 +313,15 @@ if __name__ == '__main__':
                   'mgtfsi2_dme_800_3V': r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\9.MD_init2_3V/',
                   'mgtfsi2_dme_800_1V': r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\10.MD_init2_1V/',
                   'mgtfsi2_dme_800_0V': r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\8.MD_init2_0V/',
-                  'mgtfsi2_dme_800_5V_scale_0.5':r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\14.MD_init2_charge_scale_0.5_5V/'
-                  }
+                  'mgtfsi2_dme_800_5V_scale_0.5':r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\14.MD_init2_charge_scale_0.5_5V/',
+                  'mgtfsi2_dme_800_5V_long': r"E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\13.MD_init3_long_5V/",
+                  'mgtfsi2_dme_800_5V_scale_0.9':r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\16.MD_init2_charge_scale_0.9_5V/',
+                  'mgtfsi2_dme_800_5V_scale_0.7': r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\15.MD_init2_charge_scale_0.7_5V/',
 
-    sys_name = 'mgtfsi2_dme_800_5V_scale_0.5'
-    LINE_NUMBER_PER_FRAME = 15589  # p每帧的行数
+    }
+
+    sys_name = 'mgtfsi2_dme_800_5V_scale_0.7'
+    LINE_NUMBER_PER_FRAME = 15589 # 14389 #15589  # p每帧的行数
     LAMMPSTRJ_NAME = 'NVEe_1_5_element_labeled.lammpstrj'
 
     for start in [0]:
