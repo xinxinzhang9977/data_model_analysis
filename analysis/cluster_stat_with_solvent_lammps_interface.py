@@ -10,7 +10,7 @@ class Cluster_stat():
 
     def __init__(self, file_path, center):
         self.filepath = file_path
-        self.sys = mda.Universe(file_path+'NVEa3.data', file_path+'NVEe.lammpsdump')
+        self.sys = mda.Universe(file_path+'NVEa3.data', file_path+'NVEe_1_5.lammpsdump')
         self.sys.dimensions = np.array([42.63228,42.63228,42.63228,90,90,90])
         n_atoms = len(self.sys.atoms)
         # for i in range(n_atoms):
@@ -29,6 +29,8 @@ class Cluster_stat():
         self.cluster_stat = dict()
 
     def in_queue(self, id, name):
+        if id == 0:
+            return
         self.q_id.append(id)
         self.q_name.append(name)
         self.exist.append(id)
@@ -153,7 +155,7 @@ class Cluster_stat():
 if __name__ == "__main__":
     start = time.time()
     filepaths = [
-                 r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\8.MD_init2_0V/',
+                 r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\14.MD_init2_charge_scale_0.5_5V/',
                  #r'D:\Project\43.Melm\7.MgTFSI2_DME_Melm_v11_scaled/',
                  #r'D:\Project\43.Melm\5.MgTFSI2_DME_Melm_v21_scaled/'
                  #r'D:\Project\43.Melm\1.MgHMDS2_THF_scaled/',
