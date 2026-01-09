@@ -7,11 +7,9 @@ import os
 plt.rcParams.update({'font.size': 14})
 # 读取数据
 filepaths = [
-    r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\8.MD_init2_0V/',
-    r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\10.MD_init2_1V/',
-    r"E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\11.MD_init2_2V/",
-    r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\9.MD_init2_3V/',
-    r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\12.MD_init2_4V/',
+    r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\14.MD_init2_charge_scale_0.5_5V/',
+    r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\15.MD_init2_charge_scale_0.7_5V/',
+    r"E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\16.MD_init2_charge_scale_0.9_5V/",
     r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\7.MD_init2_nvt_5V/'
 ]
 
@@ -24,7 +22,7 @@ for filepath in filepaths:
     # 创建图形和坐标轴
 
     folder_name = os.path.basename(os.path.normpath(filepath.rstrip('/\\')))
-    label_now = folder_name.split('_')[-1]
+    label_now = folder_name.split('_')[-2]
     # 绘制数据
     ax.plot(data_now[:,0], data_now[:,3], '-', label=label_now, linewidth=2)
 

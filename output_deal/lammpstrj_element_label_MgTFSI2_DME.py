@@ -2,8 +2,8 @@ import pandas as pd
 from collections import Counter
 import os
 
-filepath = r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\15.MD_init2_charge_scale_0.7_5V/'
-filename = filepath + 'NVEe_1_5.lammpstrj'
+filepath = r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\12.MD_init2_4V/'
+filename = filepath + 'NVEe_pl_1_10.lammpstrj'
 base_name, ext = os.path.splitext(filename)
 n_slab = 2160 #960 #2160
 n_dme = 800

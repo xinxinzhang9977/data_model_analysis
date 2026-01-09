@@ -29,7 +29,7 @@ class Cluster_stat():
         self.cluster_stat = dict()
 
     def in_queue(self, id, name):
-        if id == 0:
+        if id == 0:  # 如果是slab就不入队
             return
         self.q_id.append(id)
         self.q_name.append(name)

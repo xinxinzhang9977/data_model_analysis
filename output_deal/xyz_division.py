@@ -36,7 +36,7 @@ if __name__ == "__main__":
     input_filename = input_prefix + "." + format
     steps = 1000
     f_path = title_dict[sys_name]
-    f_path = r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\12.MD_init2_4V/'
+    f_path = r'E:\Project\57.MgTFSI2_DME_interface\1.800_solvents\7.MD_init2_nvt_5V/'
     paths = []
     for i in [1]:
         path = f_path

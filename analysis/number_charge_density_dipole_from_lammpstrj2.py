@@ -320,17 +320,17 @@ if __name__ == '__main__':
 
     }
 
-    sys_name = 'mgtfsi2_dme_800_5V_scale_0.7'
+    sys_name = 'mgtfsi2_dme_800_5V'
     LINE_NUMBER_PER_FRAME = 15589 # 14389 #15589  # p每帧的行数
-    LAMMPSTRJ_NAME = 'NVEe_1_5_element_labeled.lammpstrj'
+    LAMMPSTRJ_NAME = 'NVEe_pl_1_10_element_labeled.lammpstrj'
 
-    for start in [0]:
+    for start in [900]:
         end = start + 100
         step = 10
         CHARGE_NAME = LAMMPSTRJ_NAME + f'_total_density_{start}_{end}_{step}.dat'
         POTENTIAL_NAME = LAMMPSTRJ_NAME + f'_potential_{start}_{end}_{step}.dat'
         BROADEN_NAME = LAMMPSTRJ_NAME + f'_broaden_density_{start}_{end}_{step}.dat'
-        F_DENSITY = True  # 设置为False来测试读取现有数据
+        F_DENSITY = False  # 设置为False来测试读取现有数据
 
         f_path = title_dict[sys_name]
 
